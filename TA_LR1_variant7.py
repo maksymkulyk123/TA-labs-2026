@@ -17,8 +17,9 @@ def selection_sort(values):
         checks = []
         for j in range(i + 1, len(a)):
             comparisons += 1
-            checks.append((j, a[j], a[minimum], a[j] < a[minimum]))
-            if a[j] < a[minimum]:
+            less = a[j] < a[minimum]
+            checks.append((j, a[j], a[minimum], less))
+            if less:
                 minimum = j
                 assignments += 1
         chosen = a[minimum]
